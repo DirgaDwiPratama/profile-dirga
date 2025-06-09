@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Dirga</title>
+  <style>
+    :root {
+      --neon: #00ffea;
+      --dark: #0a192f;
+    }
+
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                  url('latar.jpg') center/cover fixed;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      animation: fadeIn 1.5s;
+      position: relative;
+    }
+
+    h1 {
+      color: var(--neon);
+      font-size: 3rem;
+      text-shadow: 0 0 10px var(--neon);
+      position: relative;
+      display: inline-block;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: var(--neon);
+      bottom: -10px;
+      left: 0;
+      box-shadow: 0 0 10px var(--neon);
+    }
+
+    .profile-img {
+      width: 200px;
+      border: 3px solid var(--neon);
+      border-radius: 50%;
+      box-shadow: 0 0 20px var(--neon);
+      transition: all 0.3s;
+    }
+
+    .profile-img:hover {
+      transform: rotate(5deg) scale(1.1);
+      box-shadow: 0 0 30px var(--neon);
+    }
+
+    .neon-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: transparent;
+      color: var(--neon);
+      border: 2px solid var(--neon);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .neon-btn:hover {
+      background: var(--neon);
+      color: var(--dark);
+      box-shadow: 0 0 20px var(--neon);
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .view {
+      display: none;
+      animation: fadeIn 0.5s;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      background: rgba(10, 25, 47, 0.5);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      border-left: 3px solid var(--neon);
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav-buttons">
+      <button class="neon-btn about-btn">About Me</button>
+      <a href="https://chatgpt.com" target="_blank" class="neon-btn">👨‍🏫 My Sensei</a>
+    </div>
+
+    <h1>🚀 Dirga Dwi Pratama</h1>
+    <p style="font-size: 1.2rem;">Web Developer | Tech Enthusiast | Eternal Learner</p>
+
+    <!-- Home View -->
+    <div id="home-view" class="view active">
+      <img src="fotogw.png" class="profile-img" alt="Foto Dirga">
+
+      <h2 style="color: var(--neon); margin-top: 2rem;">Hobi Saya:</h2>
+      <ul>
+        <li>Mengetik cepat - 60+ WPM, efisien dan akurat</li>
+        <li>Belajar Coding - Menikmati proses belajar HTML, CSS, dan teknologi web</li>
+        <li>Membaca Buku - Khususnya pengembangan diri dan teknologi</li>
+        <li>Bermain Game - Untuk refreshing dan strategi</li>
+      </ul>
+
+      <h2 style="color: var(--neon); margin-top: 2rem;">📁 Proyek Website</h2>
+      <ul>
+        <li><strong>Portofolio HTML:</strong> Website perkenalan interaktif dan ringan</li>
+        <li><strong>Landing Page:</strong> Desain menarik, responsif, dan animasi ringan</li>
+      </ul>
+
+      <h2 style="color: var(--neon); margin-top: 2rem;">🧠 Skill dan Tools</h2>
+      <ul>
+        <li>HTML5 & CSS3 (Dasar – Menengah)</li>
+        <li>Layouting (Flexbox, Grid dasar)</li>
+        <li>Efek CSS (hover, transisi, animasi)</li>
+        <li>Microsoft Word (pengetikan, pemformatan, TOC)</li>
+        <li>Microsoft Excel (rumus dasar, tabel, grafik)</li>
+        <li>Pengetikan cepat 60+ WPM</li>
+      </ul>
+
+      <h2 style="color: var(--neon); margin-top: 2rem;">🧰 Layanan yang Saya Tawarkan</h2>
+      <ul>
+        <li>✅ Pembuatan website statis sederhana (landing page, portofolio, profil)</li>
+        <li>✅ Pengetikan dokumen (Word, laporan, skripsi, dll)</li>
+        <li>✅ Pengolahan data dasar di Excel (rumus, grafik, tabel)</li>
+        <li>✅ Desain & formatting dokumen profesional</li>
+      </ul>
+      <a href="https://fastwork.id/user/dirgadwipratama" target="_blank" class="neon-btn">📦 Cek Profil Fastwork</a>
+
+      <div class="description">
+        <p>Hai! Saya Dirga, pembelajar mandiri yang giat dan detail-oriented. Saya sedang mengembangkan keahlian web (HTML & CSS) serta menawarkan jasa di bidang pengetikan dan pengolahan dokumen.</p>
+        <p>Dengan semangat belajar tinggi dan konsistensi, saya percaya bisa membantu banyak orang melalui keahlian saya. Saya aktif di Fastwork dan terbuka untuk proyek-proyek menarik dari Anda.</p>
+      </div>
+    </div>
+
+    <!-- About View -->
+    <div id="about-view" class="view">
+      <img src="fotogw.png" class="profile-img" alt="Foto Dirga">
+      <h2 style="color: var(--neon); margin-top: 2rem;">Tentang Saya</h2>
+      <p>Saya sedang belajar HTML dan CSS untuk membuat website sendiri.</p>
+      <div class="description">
+        <p>Saya memulai perjalanan coding saya sejak tahun 2023 dan kini fokus membangun portofolio profesional di bidang web statis dan jasa pengetikan.</p>
+        <p>Tujuan jangka pendek saya adalah bisa menangani proyek-proyek klien secara mandiri. Dalam jangka panjang, saya ingin menjadi full-stack developer dengan pemahaman kuat dari dasar hingga lanjutan.</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Temui saya di:</p>
+      <a href="mailto:dirgaja999@gmail.com" class="neon-btn">📧 Email</a>
+      <a href="https://instagram.com/dirdor.143" class="neon-btn" target="_blank">📸 Instagram</a>
+      <p style="margin-top: 1rem;">Made with ❤️ by Dirga</p>
+    </footer>
+  </div>
+
+  <script>
+    const aboutBtn = document.querySelector('.about-btn');
+    const homeView = document.getElementById('home-view');
+    const aboutView = document.getElementById('about-view');
+
+    aboutBtn.addEventListener('click', () => {
+      if (homeView.classList.contains('active')) {
+        homeView.classList.remove('active');
+        aboutView.classList.add('active');
+        aboutBtn.textContent = 'Back to Home';
+      } else {
+        homeView.classList.add('active');
+        aboutView.classList.remove('active');
+        aboutBtn.textContent = 'About Me';
+      }
+    });
+  </script>
+</body>
+</html>
